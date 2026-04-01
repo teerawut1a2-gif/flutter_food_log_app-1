@@ -74,17 +74,7 @@ class _ShowAllFoodUiState extends State<ShowAllFoodUi> {
                       bottom: 5,
                     ),
                     child: ListTile(
-                      onTap: () {
-                        Navigator.push(
-                          context, 
-                          MaterialPageRoute(
-                            builder: (context) => UpdateDelFoodUi(
-                              food: foods[index],
-                            )))
-                            .then((value) {loadAllFoods();});
-                           
-                        
-                      },
+                      onTap: () {},
                       leading: Image.asset(
                         'assets/images/food_img.png'),
                       title: Text(

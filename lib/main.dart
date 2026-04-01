@@ -8,10 +8,10 @@ void main()
 //----------------Setting Config Supabase----------------
 async{
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   await Supabase.initialize(
-    url: 'https://qpgxhjpezmtqqvmzsxye.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwZ3hoanBlem10cXF2bXpzeHllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3ODc5NDYsImV4cCI6MjA4OTM2Mzk0Nn0.ohS_VLa0T1Z33DnJl9TLv5jJ5jT8T8ABaRizVM_XSlY',
+    url: 'https://mwqmzzblyxsbyguwmgok.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13cW16emJseXhzYnlndXdtZ29rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3ODc5MjIsImV4cCI6MjA4OTM2MzkyMn0.PLs08YSZ7fzgyBJtF_dUii16dk63luUMUs_uOKAi5GY',
   );
 //-------------------------------------------------------
   runApp(

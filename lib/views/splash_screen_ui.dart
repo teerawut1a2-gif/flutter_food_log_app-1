@@ -23,7 +23,7 @@ class _SplashScreenUiState extends State<SplashScreenUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 80, 152, 215),
+      backgroundColor: const Color.fromARGB(255, 242, 88, 232),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +35,7 @@ class _SplashScreenUiState extends State<SplashScreenUi> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'กินแซ๊บบบบบแซ่บ LOG',
+              'กินแซ๊บบ LOG',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class _SplashScreenUiState extends State<SplashScreenUi> {
               ),
             ),
             Text(
-              '🍳🌭🌮🍗🥪🍿🍟🍕',
+              '🌮🍗🥪🍿🍟🍕',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

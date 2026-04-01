@@ -14,7 +14,7 @@ class SupabaseService {
 //ดึงข้อมูลทั้งหมดจากตาราง food_tb ใน Supabase
     final data = await supabase
         .from('food_tb')
-        .select()
+        .select('*')
         .order('foodDate', ascending: false);
 //แปลงข้อมูลที่ได้จาก Supabase ซึ่งเป็น JSON มาใช้ในแอปฯ แล้วส่งผลลัพธ์ไปยังหน้าที่เรียกใช้เมธอด
     return data.map<Food>((e) => Food.fromJson(e)).toList();
@@ -23,5 +23,15 @@ class SupabaseService {
 // สร้างเมธอดสำหรับการเพิ่มข้อมูลใหม่ลงใน food_tb ใน Supabase
   Future insertFood(Food food) async {
     await supabase.from('food_tb').insert(food.toJson());
+  }
+  
+// สร้างเมธอดสำหรับการแก้ไขข้อมูลใน food_tb ใน Supabase
+  Future updateFood(String id, Food food) async {
+    await supabase.from('food_tb').update(food.toJson()).eq('id', id);
+  }
+
+// สร้างเมธอดสำหรับการลบข้อมูลใน food_tb ใน Supabase
+  Future deleteFood(String id) async {
+    await supabase.from('food_tb').delete().eq('id', id);
   }
 }

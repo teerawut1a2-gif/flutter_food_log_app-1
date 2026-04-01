@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_food_log_app/models/food.dart';
 import 'package:flutter_food_log_app/services/supabase_service.dart';
 import 'package:flutter_food_log_app/views/add_food_ui.dart';
+import 'package:flutter_food_log_app/views/update_del_food_ui.dart';
 
 class ShowAllFoodUi extends StatefulWidget {
   const ShowAllFoodUi({super.key});
@@ -36,9 +37,9 @@ class _ShowAllFoodUiState extends State<ShowAllFoodUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 80, 152, 215),
+        backgroundColor: const Color.fromARGB(255, 242, 88, 232),
         title: Text(
-          'กินแซ๊บบบบบแซ่บ LOG',
+          'กินแซ๊บบบ LOG',
           style: TextStyle(
             color: Colors.white,
           ),
@@ -73,7 +74,17 @@ class _ShowAllFoodUiState extends State<ShowAllFoodUi> {
                       bottom: 5,
                     ),
                     child: ListTile(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => UpdateDelFoodUi(
+                              food: foods[index],
+                            )))
+                            .then((value) {loadAllFoods();});
+                           
+                        
+                      },
                       leading: Image.asset(
                         'assets/images/food_img.png'),
                       title: Text(
@@ -107,7 +118,7 @@ class _ShowAllFoodUiState extends State<ShowAllFoodUi> {
                 .then((value) {loadAllFoods();});
         },
         child: Icon(Icons.add),
-        backgroundColor: const Color.fromARGB(255, 80, 152, 215),
+        backgroundColor: const Color.fromARGB(255, 242, 88, 232),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
